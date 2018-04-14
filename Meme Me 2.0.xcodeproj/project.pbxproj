@@ -12,6 +12,7 @@
 		773316C12081B7AC00299DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773316BF2081B7AC00299DD0 /* Main.storyboard */; };
 		773316C32081B7AC00299DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773316C22081B7AC00299DD0 /* Assets.xcassets */; };
 		773316C62081B7AC00299DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773316C42081B7AC00299DD0 /* LaunchScreen.storyboard */; };
+		773316CF2081C84400299DD0 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773316CE2081C84400299DD0 /* impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		773316C22081B7AC00299DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		773316C52081B7AC00299DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		773316C72081B7AC00299DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		773316CE2081C84400299DD0 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,19 @@
 				773316BD2081B7AB00299DD0 /* EditorViewController.swift */,
 				773316BF2081B7AC00299DD0 /* Main.storyboard */,
 				773316C22081B7AC00299DD0 /* Assets.xcassets */,
+				773316CD2081C82D00299DD0 /* Fonts */,
 				773316C42081B7AC00299DD0 /* LaunchScreen.storyboard */,
 				773316C72081B7AC00299DD0 /* Info.plist */,
 			);
 			path = "Meme Me 2.0";
+			sourceTree = "<group>";
+		};
+		773316CD2081C82D00299DD0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				773316CE2081C84400299DD0 /* impact.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773316CF2081C84400299DD0 /* impact.ttf in Resources */,
 				773316C62081B7AC00299DD0 /* LaunchScreen.storyboard in Resources */,
 				773316C32081B7AC00299DD0 /* Assets.xcassets in Resources */,
 				773316C12081B7AC00299DD0 /* Main.storyboard in Resources */,
