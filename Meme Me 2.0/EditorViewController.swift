@@ -39,6 +39,7 @@ UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
+        showMemesButton.isEnabled = false
     }
     
     // MARK: resetTheWorld - resets the app to an initial state
