@@ -79,6 +79,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomMemeTextField" destination="e1E-er-d3R" id="a4G-xs-4JX"/>
+                        <outlet property="cameraButton" destination="vjL-oH-7f4" id="fdD-Lw-7ZT"/>
+                        <outlet property="cancelButton" destination="Xax-2b-FfW" id="u7V-Be-ZoS"/>
+                        <outlet property="galleryButton" destination="63W-fB-Hrk" id="alU-6A-uvq"/>
+                        <outlet property="imagePickerView" destination="PZp-2p-hSL" id="a5h-te-d1V"/>
+                        <outlet property="imageSourceToolbar" destination="yAx-81-4Uk" id="1ZU-mR-LWI"/>
+                        <outlet property="shareButton" destination="lEv-ZK-6g7" id="Hrb-qY-ZqX"/>
+                        <outlet property="sharingToolbar" destination="N6o-h7-FWo" id="QKd-3r-5aa"/>
+                        <outlet property="showMemesButton" destination="WJS-tl-wDm" id="iYe-cV-fEI"/>
+                        <outlet property="topMemeTextField" destination="3mM-aJ-ghr" id="2MM-j9-Xli"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

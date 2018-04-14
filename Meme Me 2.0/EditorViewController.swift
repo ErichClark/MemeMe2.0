@@ -9,7 +9,22 @@
 import UIKit
 
 class EditorViewController: UIViewController {
-
+    
+    //var memes = [Meme]()
+    
+    // MARK: Outlets
+    @IBOutlet weak var sharingToolbar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var showMemesButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var topMemeTextField: UITextField!
+    @IBOutlet weak var bottomMemeTextField: UITextField!
+    @IBOutlet weak var imageSourceToolbar: UIToolbar!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var galleryButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
