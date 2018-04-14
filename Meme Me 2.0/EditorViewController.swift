@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EditorViewController.swift
 //  Meme Me 2.0
 //
 //  Created by Erich Clark on 4/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EditorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

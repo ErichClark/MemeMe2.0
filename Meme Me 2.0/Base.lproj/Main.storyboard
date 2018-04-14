@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EditorViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-2p-hSL" userLabel="originalImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-81-4Uk" userLabel="editingToolbar">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uLy-ez-Mht" userLabel="flex"/>
+                                    <barButtonItem systemItem="camera" id="vjL-oH-7f4" userLabel="CameraButton"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="tbN-Zk-PmB" userLabel="fixed"/>
+                                    <barButtonItem systemItem="organize" id="63W-fB-Hrk" userLabel="ImagePickerButton"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Bk-nw-FfZ" userLabel="flex"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6o-h7-FWo" userLabel="SharingToolbar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="lEv-ZK-6g7"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3t8-0D-tV9" userLabel="flex"/>
+                                    <barButtonItem title="Sent Memes" id="WJS-tl-wDm" userLabel="SentMemesButton"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ib3-94-yyr" userLabel="flex"/>
+                                    <barButtonItem systemItem="cancel" id="Xax-2b-FfW" userLabel="CancelButton"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="N6o-h7-FWo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2eZ-NT-eA7"/>
+                            <constraint firstItem="N6o-h7-FWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3hv-hX-d1g"/>
+                            <constraint firstItem="PZp-2p-hSL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="84w-1e-sfM"/>
+                            <constraint firstAttribute="bottom" secondItem="PZp-2p-hSL" secondAttribute="bottom" id="HiT-rz-Y31"/>
+                            <constraint firstAttribute="trailing" secondItem="PZp-2p-hSL" secondAttribute="trailing" id="Kv7-76-nx3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yAx-81-4Uk" secondAttribute="bottom" id="R91-UU-vS9"/>
+                            <constraint firstItem="yAx-81-4Uk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xw4-AI-kwL"/>
+                            <constraint firstItem="PZp-2p-hSL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i9o-Px-5aD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAx-81-4Uk" secondAttribute="trailing" id="vua-T0-ooY"/>
+                            <constraint firstAttribute="trailing" secondItem="N6o-h7-FWo" secondAttribute="trailing" id="wx7-xL-cAs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
