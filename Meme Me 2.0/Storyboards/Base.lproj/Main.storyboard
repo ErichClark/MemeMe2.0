@@ -134,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1342" y="124"/>
         </scene>
-        <!--Item-->
+        <!--Collection View Controller-->
         <scene sceneID="1Tu-Ny-sUo">
             <objects>
                 <collectionViewController id="Fj9-jq-UJy" sceneMemberID="viewController">
@@ -149,13 +149,25 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TAq-gr-JY0">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionSentMemeCell" id="TAq-gr-JY0">
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-Zw-7H1" userLabel="sentMemeImageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="bMo-Zw-7H1" firstAttribute="top" secondItem="TAq-gr-JY0" secondAttribute="top" id="eKg-Gh-KWP"/>
+                                    <constraint firstAttribute="bottom" secondItem="bMo-Zw-7H1" secondAttribute="bottom" id="gbN-IF-edR"/>
+                                    <constraint firstItem="bMo-Zw-7H1" firstAttribute="leading" secondItem="TAq-gr-JY0" secondAttribute="leading" id="pRw-lk-Zay"/>
+                                    <constraint firstAttribute="trailing" secondItem="bMo-Zw-7H1" secondAttribute="trailing" id="qwH-jC-pPA"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="200"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -163,13 +175,13 @@
                             <outlet property="delegate" destination="Fj9-jq-UJy" id="cZ5-5o-cL5"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="seW-tf-jZi"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection" id="seW-tf-jZi"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-0I-lLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2378" y="421"/>
         </scene>
-        <!--Item-->
+        <!--Table View Controller-->
         <scene sceneID="SEx-wW-f2J">
             <objects>
                 <tableViewController id="kwy-fy-PKj" sceneMemberID="viewController">
@@ -178,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1qx-sG-Q2F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableSentMemeCell" id="1qx-sG-Q2F">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qx-sG-Q2F" id="BnY-1g-4ZK">
@@ -192,7 +204,7 @@
                             <outlet property="delegate" destination="kwy-fy-PKj" id="kVn-n7-7an"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="xvB-v7-Nhc"/>
+                    <tabBarItem key="tabBarItem" title="" image="table" id="xvB-v7-Nhc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhL-hK-wuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,5 +213,7 @@
     </scenes>
     <resources>
         <image name="MemeGeneratorIcon-1024" width="1024" height="1024"/>
+        <image name="collection" width="30" height="30"/>
+        <image name="table" width="30" height="30"/>
     </resources>
 </document>
