@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-2p-hSL" userLabel="imagePickerView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MemeGeneratorIcon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-2p-hSL" userLabel="imagePickerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-81-4Uk" userLabel="imageSourceToolbar">
@@ -67,13 +67,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mM-aJ-ghr" userLabel="topMemeTextField">
-                                <rect key="frame" x="0.0" y="129" width="375" height="74"/>
+                                <rect key="frame" x="0.0" y="75" width="375" height="74"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-er-d3R" userLabel="bottomMemeTextField">
-                                <rect key="frame" x="0.0" y="479" width="375" height="74"/>
+                                <rect key="frame" x="0.0" y="523" width="375" height="74"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -88,12 +88,12 @@
                             <constraint firstAttribute="trailing" secondItem="PZp-2p-hSL" secondAttribute="trailing" id="Kv7-76-nx3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3mM-aJ-ghr" secondAttribute="trailing" id="QiX-NX-rAJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yAx-81-4Uk" secondAttribute="bottom" id="R91-UU-vS9"/>
-                            <constraint firstItem="yAx-81-4Uk" firstAttribute="top" secondItem="e1E-er-d3R" secondAttribute="bottom" constant="70" id="WlM-i6-8vz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e1E-er-d3R" secondAttribute="bottom" constant="70" id="WlM-i6-8vz"/>
                             <constraint firstItem="yAx-81-4Uk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xw4-AI-kwL"/>
                             <constraint firstItem="3mM-aJ-ghr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YN1-zC-I4z"/>
                             <constraint firstItem="e1E-er-d3R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d8G-Nc-jWp"/>
                             <constraint firstItem="PZp-2p-hSL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i9o-Px-5aD"/>
-                            <constraint firstItem="3mM-aJ-ghr" firstAttribute="top" secondItem="N6o-h7-FWo" secondAttribute="bottom" constant="65" id="rgk-D8-qL2"/>
+                            <constraint firstItem="3mM-aJ-ghr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="rgk-D8-qL2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAx-81-4Uk" secondAttribute="trailing" id="vua-T0-ooY"/>
                             <constraint firstAttribute="trailing" secondItem="N6o-h7-FWo" secondAttribute="trailing" id="wx7-xL-cAs"/>
                         </constraints>
@@ -114,6 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="367" y="126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="61q-jz-1Le">
@@ -131,7 +132,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OR-lz-xfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244" y="126"/>
+            <point key="canvasLocation" x="1342" y="124"/>
         </scene>
         <!--Item-->
         <scene sceneID="1Tu-Ny-sUo">
@@ -198,4 +199,7 @@
             <point key="canvasLocation" x="2378" y="-400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MemeGeneratorIcon-1024" width="1024" height="1024"/>
+    </resources>
 </document>
