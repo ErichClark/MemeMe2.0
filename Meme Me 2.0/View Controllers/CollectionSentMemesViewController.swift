@@ -12,9 +12,18 @@ private let reuseIdentifier = "Cell"
 
 class CollectionSentMemesViewController: UICollectionViewController {
 
+    var memes: [Meme]! {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.memes
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let width = (collectionView?.frame.width)! / 3
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,19 +52,21 @@ class CollectionSentMemesViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return memes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionSentMemeCell", for: indexPath)
     
-        // Configure the cell
+        let meme = memes[(indexPath as NSIndexPath).row]
+        
+        //cell. = meme.memedImage
     
         return cell
     }
