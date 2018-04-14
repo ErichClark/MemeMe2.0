@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ViewController  {
+extension EditorViewController  {
     func importImage(source: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self

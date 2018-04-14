@@ -73,7 +73,7 @@ UITextFieldDelegate {
         // Add it to the memes array in the Application Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
-        showMemes.isEnabled = true
+        showMemesButton.isEnabled = true
     }
     
     // MARK: Default meme text formatting
