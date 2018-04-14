@@ -23,36 +23,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-2p-hSL" userLabel="originalImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZp-2p-hSL" userLabel="imagePickerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-81-4Uk" userLabel="editingToolbar">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-81-4Uk" userLabel="imageSourceToolbar">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uLy-ez-Mht" userLabel="flex"/>
-                                    <barButtonItem systemItem="camera" id="vjL-oH-7f4" userLabel="CameraButton"/>
+                                    <barButtonItem systemItem="camera" id="vjL-oH-7f4" userLabel="cameraButton"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="tbN-Zk-PmB" userLabel="fixed"/>
-                                    <barButtonItem systemItem="organize" id="63W-fB-Hrk" userLabel="ImagePickerButton"/>
+                                    <barButtonItem systemItem="organize" id="63W-fB-Hrk" userLabel="galleryButton"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8Bk-nw-FfZ" userLabel="flex"/>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6o-h7-FWo" userLabel="SharingToolbar">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6o-h7-FWo" userLabel="sharingToolbar">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="lEv-ZK-6g7"/>
+                                    <barButtonItem systemItem="action" id="lEv-ZK-6g7" userLabel="shareButton"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3t8-0D-tV9" userLabel="flex"/>
-                                    <barButtonItem title="Sent Memes" id="WJS-tl-wDm" userLabel="SentMemesButton"/>
+                                    <barButtonItem title="Sent Memes" id="WJS-tl-wDm" userLabel="showMemesButton"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ib3-94-yyr" userLabel="flex"/>
-                                    <barButtonItem systemItem="cancel" id="Xax-2b-FfW" userLabel="CancelButton"/>
+                                    <barButtonItem systemItem="cancel" id="Xax-2b-FfW" userLabel="cancelButton"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mM-aJ-ghr" userLabel="topTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mM-aJ-ghr" userLabel="topMemeTextField">
                                 <rect key="frame" x="0.0" y="129" width="375" height="74"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-er-d3R" userLabel="bottomTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-er-d3R" userLabel="bottomMemeTextField">
                                 <rect key="frame" x="0.0" y="479" width="375" height="74"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
