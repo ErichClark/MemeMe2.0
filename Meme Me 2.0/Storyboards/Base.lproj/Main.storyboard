@@ -79,6 +79,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="N6o-h7-FWo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2eZ-NT-eA7"/>
                             <constraint firstItem="N6o-h7-FWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3hv-hX-d1g"/>
@@ -134,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1342" y="124"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Collection Sent Memes View Controller-->
         <scene sceneID="1Tu-Ny-sUo">
             <objects>
-                <collectionViewController id="Fj9-jq-UJy" sceneMemberID="viewController">
+                <collectionViewController id="Fj9-jq-UJy" customClass="CollectionSentMemesViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zbb-aq-8uM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="2378" y="421"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table Sent Memes View Controller-->
         <scene sceneID="SEx-wW-f2J">
             <objects>
-                <tableViewController id="kwy-fy-PKj" sceneMemberID="viewController">
+                <tableViewController id="kwy-fy-PKj" customClass="TableSentMemesViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwk-P1-9Kr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

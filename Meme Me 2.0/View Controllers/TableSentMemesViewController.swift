@@ -10,14 +10,12 @@ import UIKit
 
 class TableSentMemesViewController: UITableViewController {
     
-    var memes: [Meme] {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes
-    }
+    var memes: [Meme]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
     }
 
     override func didReceiveMemoryWarning() {

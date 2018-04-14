@@ -12,14 +12,14 @@ private let reuseIdentifier = "Cell"
 
 class CollectionSentMemesViewController: UICollectionViewController {
 
-    var memes: [Meme]! {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes
-    }
+    var memes: [Meme]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        
         let width = (collectionView?.frame.width)! / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
@@ -66,7 +66,7 @@ class CollectionSentMemesViewController: UICollectionViewController {
     
         let meme = memes[(indexPath as NSIndexPath).row]
         
-        //cell. = meme.memedImage
+        // cell. = meme.memedImage
     
         return cell
     }

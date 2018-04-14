@@ -11,9 +11,7 @@ import UIKit
 
 class EditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
 UITextFieldDelegate {
-    
-    var memes = [Meme]()
-    
+        
     // MARK: Outlets
     @IBOutlet weak var sharingToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -69,7 +67,7 @@ UITextFieldDelegate {
     
     func saveMeme() {
         let meme = generateMeme()
-        UIImageWriteToSavedPhotosAlbum(meme.memedImage!, nil, nil, nil)
+        // UIImageWriteToSavedPhotosAlbum(meme.memedImage!, nil, nil, nil)
         
         // Add it to the memes array in the Application Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
