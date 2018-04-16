@@ -17,6 +17,7 @@
 		773316D52081CF5900299DD0 /* Meme Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773316D42081CF5900299DD0 /* Meme Model.swift */; };
 		7778ABD220828B4800493153 /* CollectionSentMemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778ABD120828B4800493153 /* CollectionSentMemesViewController.swift */; };
 		7778ABD420828B6A00493153 /* TableSentMemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778ABD320828B6A00493153 /* TableSentMemesViewController.swift */; };
+		7778ABD82082A72500493153 /* CollectionSentMemeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778ABD72082A72500493153 /* CollectionSentMemeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		773316D42081CF5900299DD0 /* Meme Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meme Model.swift"; sourceTree = "<group>"; };
 		7778ABD120828B4800493153 /* CollectionSentMemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSentMemesViewController.swift; sourceTree = "<group>"; };
 		7778ABD320828B6A00493153 /* TableSentMemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSentMemesViewController.swift; sourceTree = "<group>"; };
+		7778ABD72082A72500493153 /* CollectionSentMemeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSentMemeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				773316BD2081B7AB00299DD0 /* EditorViewController.swift */,
 				7778ABD120828B4800493153 /* CollectionSentMemesViewController.swift */,
+				7778ABD72082A72500493153 /* CollectionSentMemeViewCell.swift */,
 				7778ABD320828B6A00493153 /* TableSentMemesViewController.swift */,
 			);
 			path = "View Controllers";
@@ -182,6 +185,7 @@
 				7778ABD420828B6A00493153 /* TableSentMemesViewController.swift in Sources */,
 				7778ABD220828B4800493153 /* CollectionSentMemesViewController.swift in Sources */,
 				773316BC2081B7AB00299DD0 /* AppDelegate.swift in Sources */,
+				7778ABD82082A72500493153 /* CollectionSentMemeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
