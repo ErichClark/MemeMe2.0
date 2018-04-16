@@ -13,7 +13,6 @@ class CollectionSentMemesViewController: UICollectionViewController {
     
     var memes: [Meme]! {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print("loaded memes from AppDelegate with \(appDelegate.memes) memes.")
         return appDelegate.memes
     }
     
@@ -28,7 +27,6 @@ class CollectionSentMemesViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("MEMES.COUNT = \(memes.count)")
         return memes.count
     }
 
@@ -43,5 +41,21 @@ class CollectionSentMemesViewController: UICollectionViewController {
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showMemeDetails", sender: AnyObject.self)
+        let meme = memes[indexPath.row]
+        print("sending meme that says \(meme.topText), \(meme.bottomText)")
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMemeDetails" {
+            if let dest = segue.destination as? MemeDetailsViewController,
+                let index = collectionView?.indexPathsForSelectedItems?.first {
+                let meme = memes[index.row]
+                print("SENDING MEME FROM COLLECTION WITH WORDS: \(meme.topText), \(meme.bottomText)")
+                dest.meme = meme
+            }
+        }
+    }
 }
