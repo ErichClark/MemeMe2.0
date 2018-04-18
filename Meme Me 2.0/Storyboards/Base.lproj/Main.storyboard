@@ -18,7 +18,7 @@
         <!--Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EditorViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditorViewController" id="BYZ-38-t0r" customClass="EditorViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,11 +53,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3t8-0D-tV9" userLabel="flex"/>
-                                    <barButtonItem title="Sent Memes" id="WJS-tl-wDm" userLabel="showMemesButton">
-                                        <connections>
-                                            <segue destination="eO9-Hc-Q6N" kind="show" id="jKa-5e-AnY"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ib3-94-yyr" userLabel="flex"/>
                                     <barButtonItem systemItem="cancel" id="Xax-2b-FfW" userLabel="cancelButton">
                                         <connections>
@@ -109,7 +104,6 @@
                         <outlet property="imageSourceToolbar" destination="yAx-81-4Uk" id="1ZU-mR-LWI"/>
                         <outlet property="shareButton" destination="lEv-ZK-6g7" id="Hrb-qY-ZqX"/>
                         <outlet property="sharingToolbar" destination="N6o-h7-FWo" id="QKd-3r-5aa"/>
-                        <outlet property="showMemesButton" destination="WJS-tl-wDm" id="iYe-cV-fEI"/>
                         <outlet property="topMemeTextField" destination="3mM-aJ-ghr" id="2MM-j9-Xli"/>
                     </connections>
                 </viewController>
@@ -305,6 +299,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iAI-rC-Pd3"/>
-        <segue reference="Hcn-S1-KZp"/>
     </inferredMetricsTieBreakers>
 </document>
