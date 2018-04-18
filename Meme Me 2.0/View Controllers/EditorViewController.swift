@@ -149,7 +149,7 @@ UITextFieldDelegate {
                 (UIActivityType, completed, returnedItems, error) in
                 if completed {
                     self.saveMeme()
-                    //self.performSegue(withIdentifier: "SentMemesTabController", sender: self)
+                    self.returnToGalleries()
                 }
             }
             self.present(activityVC, animated: true, completion: nil)
@@ -158,7 +158,7 @@ UITextFieldDelegate {
     
     @IBAction func cancelAndResetTheWorld(_ sender: AnyObject) {
         resetTheWorld()
-        self.navigationController?.popViewController(animated: true)
+        returnToGalleries()
     }
     
     // MARK: generateMeme
@@ -179,12 +179,9 @@ UITextFieldDelegate {
         return meme
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "SentMemesTabController" {
-//            if let dest = segue.destination as? SentMemesTabController {
-//                if tabBarController.mem
-//            }
-//        }
-//    }
+    func returnToGalleries() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
 }
 
