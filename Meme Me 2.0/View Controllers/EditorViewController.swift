@@ -15,7 +15,6 @@ UITextFieldDelegate {
     // MARK: Outlets
     @IBOutlet weak var sharingToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var showMemesButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var topMemeTextField: UITextField!
@@ -37,7 +36,6 @@ UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-        showMemesButton.isEnabled = false
     }
     
     // MARK: resetTheWorld - resets the app to an initial state
@@ -72,7 +70,6 @@ UITextFieldDelegate {
         // Add it to the memes array in the Application Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
-        showMemesButton.isEnabled = true
     }
     
     // MARK: Default meme text formatting
@@ -157,6 +154,7 @@ UITextFieldDelegate {
     
     @IBAction func cancelAndResetTheWorld(_ sender: AnyObject) {
         resetTheWorld()
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: generateMeme

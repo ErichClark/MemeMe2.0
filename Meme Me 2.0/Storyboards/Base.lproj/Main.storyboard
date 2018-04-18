@@ -95,6 +95,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bottomMemeTextField" destination="e1E-er-d3R" id="a4G-xs-4JX"/>
                         <outlet property="cameraButton" destination="vjL-oH-7f4" id="fdD-Lw-7ZT"/>
@@ -109,14 +110,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442" y="124"/>
+            <point key="canvasLocation" x="2209" y="-654"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="61q-jz-1Le">
             <objects>
                 <tabBarController id="eO9-Hc-Q6N" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Sent Memes" leftItemsSupplementBackButton="YES" id="Gfd-LD-j72">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vvG-YR-9bs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vvG-YR-9bs">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="X8X-aZ-gMu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vLo-RJ-LQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -130,7 +135,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OR-lz-xfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="124"/>
+            <point key="canvasLocation" x="1218" y="111"/>
         </scene>
         <!--Collection Sent Memes View Controller-->
         <scene sceneID="1Tu-Ny-sUo">
@@ -179,7 +184,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-0I-lLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.8000000000002" y="419.64017991004499"/>
+            <point key="canvasLocation" x="2295" y="899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyl-Hi-tQ9">
@@ -200,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShQ-R4-zKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="-588"/>
+            <point key="canvasLocation" x="404" y="125"/>
         </scene>
         <!--Table Sent Memes View Controller-->
         <scene sceneID="SEx-wW-f2J">
@@ -248,7 +253,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhL-hK-wuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="-400"/>
+            <point key="canvasLocation" x="2305" y="92"/>
         </scene>
         <!--Meme Details View Controller-->
         <scene sceneID="yZ7-tx-PJS">
@@ -289,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nY8-To-QHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3560.8000000000002" y="-47.226386806596707"/>
+            <point key="canvasLocation" x="3550" y="414"/>
         </scene>
     </scenes>
     <resources>
