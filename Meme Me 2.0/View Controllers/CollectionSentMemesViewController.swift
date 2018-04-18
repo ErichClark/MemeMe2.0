@@ -11,19 +11,31 @@ import UIKit
 
 class CollectionSentMemesViewController: UICollectionViewController {
     
-    var memes: [Meme]! {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes
-    }
+    var memes = [Meme]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        memes = appDelegate.memes
         
         let width = (collectionView?.frame.width)! / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        memes = appDelegate.memes
+        updateCollection()
+    }
+    
+    func updateCollection() {
+        let expectedItemCount = appDelegate.memes.count
+        while (self.collectionView?.numberOfItems(inSection: 0))! < expectedItemCount    {
+            let index = IndexPath(row: (expectedItemCount - 1), section: 0)
+            collectionView?.insertItems(at: [index])
+        }
+    }
+    
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

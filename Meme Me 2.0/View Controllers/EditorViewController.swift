@@ -11,7 +11,9 @@ import UIKit
 
 class EditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
 UITextFieldDelegate {
-        
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // MARK: Outlets
     @IBOutlet weak var sharingToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -71,7 +73,6 @@ UITextFieldDelegate {
         // UIImageWriteToSavedPhotosAlbum(meme.memedImage!, nil, nil, nil)
         
         // Add it to the memes array in the Application Delegate
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
     }
     
@@ -148,7 +149,7 @@ UITextFieldDelegate {
                 (UIActivityType, completed, returnedItems, error) in
                 if completed {
                     self.saveMeme()
-                    self.dismiss(animated: true, completion: nil)
+                    //self.performSegue(withIdentifier: "SentMemesTabController", sender: self)
                 }
             }
             self.present(activityVC, animated: true, completion: nil)
@@ -178,6 +179,12 @@ UITextFieldDelegate {
         return meme
     }
     
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "SentMemesTabController" {
+//            if let dest = segue.destination as? SentMemesTabController {
+//                if tabBarController.mem
+//            }
+//        }
+//    }
 }
 

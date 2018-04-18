@@ -11,13 +11,24 @@ import UIKit
 class TableSentMemesViewController: UITableViewController {
     
     var memes: [Meme]!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        memes = appDelegate.memes
+        updateTable()
+    }
+    
+    func updateTable() {
+        let expectedRowCount = appDelegate.memes.count
+        while self.tableView.numberOfRows(inSection: 0) < expectedRowCount    {
+            let index = IndexPath(row: (expectedRowCount - 1), section: 0)
+            tableView.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
