@@ -36,6 +36,7 @@ UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: resetTheWorld - resets the app to an initial state
@@ -51,6 +52,8 @@ UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
     }
     
     // MARK: Actions
