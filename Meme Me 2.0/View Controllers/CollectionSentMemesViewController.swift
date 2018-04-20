@@ -18,7 +18,7 @@ class CollectionSentMemesViewController: UICollectionViewController {
         super.viewDidLoad()
         memes = appDelegate.memes
         
-        let width = (collectionView?.frame.width)! / 3
+        let width = (collectionView?.frame.width)! / 2
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
     }
@@ -30,10 +30,17 @@ class CollectionSentMemesViewController: UICollectionViewController {
     
     func updateCollection() {
         let expectedItemCount = appDelegate.memes.count
-        while (self.collectionView?.numberOfItems(inSection: 0))! < expectedItemCount    {
-            let index = IndexPath(row: (expectedItemCount - 1), section: 0)
-            collectionView?.insertItems(at: [index])
-        }
+        let updatesInLoop = expectedItemCount - (self.collectionView?.numberOfItems(inSection: 0))!
+        var loopChecker = 0
+        
+        collectionView?.performBatchUpdates ({
+            for _ in 0..<updatesInLoop    {
+                let index = IndexPath(row: (expectedItemCount - 1), section: 0)
+                collectionView?.insertItems(at: [index])
+                loopChecker += 1
+                print("COLLECTION UPDATE loop #\(loopChecker)")
+            }
+        }, completion: nil)
     }
     
     // MARK: UICollectionViewDataSource

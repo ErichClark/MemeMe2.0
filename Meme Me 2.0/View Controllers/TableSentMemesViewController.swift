@@ -24,14 +24,17 @@ class TableSentMemesViewController: UITableViewController {
     
     func updateTable() {
         let expectedRowCount = appDelegate.memes.count
-        while self.tableView.numberOfRows(inSection: 0) < expectedRowCount    {
-            let index = IndexPath(row: (expectedRowCount - 1), section: 0)
-            tableView.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
-        }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let updatesInLoop = expectedRowCount - self.tableView.numberOfRows(inSection: 0)
+        var loopChecker = 0
+        
+        tableView.performBatchUpdates({
+            for _ in 0..<updatesInLoop    {
+                let index = IndexPath(row: (expectedRowCount - 1 - updatesInLoop), section: 0)
+                tableView.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
+                loopChecker += 1
+                print("TABLEVIEW UPDATES loop #\(loopChecker)")
+            }
+        }, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -62,7 +65,6 @@ class TableSentMemesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showMemeDetails", sender: AnyObject.self)
     }
-
 
     
     // MARK: - Navigation
