@@ -17,28 +17,28 @@ class CollectionSentMemesViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         memes = appDelegate.memes
-        
-        let width = (collectionView?.frame.width)! / 2
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
+        setDisplayFormat()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        memes = appDelegate.memes
         updateCollection()
+        setDisplayFormat()
     }
     
     func updateCollection() {
-        let expectedItemCount = appDelegate.memes.count
-        let updatesInLoop = expectedItemCount - (self.collectionView?.numberOfItems(inSection: 0))!
-        var loopChecker = 0
+        let masterCount = appDelegate.memes.count
+        let localCount = (self.collectionView?.numberOfItems(inSection: 0))!
+        var newItems = masterCount - localCount
+        print("NEW ITEMS FOUND = \(newItems)")
         
         collectionView?.performBatchUpdates ({
-            for _ in 0..<updatesInLoop    {
-                let index = IndexPath(row: (expectedItemCount - 1), section: 0)
+            while newItems > 0    {
+                let newItem = appDelegate.memes[masterCount - newItems]
+                memes.append(newItem)
+                let index = IndexPath(row: (memes.count - 1), section: 0)
                 collectionView?.insertItems(at: [index])
-                loopChecker += 1
-                print("COLLECTION UPDATE loop #\(loopChecker)")
+                print("***COLLECTION ITEM WITH TOP TEXT: **\(newItem.topText)** IS COMPLETE **")
+                newItems -= 1
             }
         }, completion: nil)
     }
@@ -76,5 +76,19 @@ class CollectionSentMemesViewController: UICollectionViewController {
                 dest.meme = meme
             }
         }
+    }
+    
+    func setDisplayFormat () {
+        let minimumInterItemSpacing: CGFloat = 10
+        let minimumLineSpacing: CGFloat = 10
+        let numberOfColumns: CGFloat = 3
+
+        let width = ((collectionView?.frame.width)! - minimumInterItemSpacing - minimumLineSpacing) / numberOfColumns
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        let sideLength = width - (minimumInterItemSpacing + minimumLineSpacing)
+        layout.itemSize = CGSize(width: sideLength, height: sideLength)
+        
     }
 }

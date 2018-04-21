@@ -15,24 +15,27 @@ class TableSentMemesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        memes = appDelegate.memes
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        memes = appDelegate.memes
         updateTable()
     }
     
     func updateTable() {
-        let expectedRowCount = appDelegate.memes.count
-        let updatesInLoop = expectedRowCount - self.tableView.numberOfRows(inSection: 0)
-        var loopChecker = 0
+        let masterCount = appDelegate.memes.count
+        let tableCount = self.tableView.numberOfRows(inSection: 0)
+        var newItems = masterCount - tableCount
+        print("NEW ITEMS FOUND = \(newItems)")
         
         tableView.performBatchUpdates({
-            for _ in 0..<updatesInLoop    {
-                let index = IndexPath(row: (expectedRowCount - 1 - updatesInLoop), section: 0)
+            while newItems > 0   {
+                let newItem = appDelegate.memes[masterCount - newItems]
+                memes.append(newItem)
+                let index = IndexPath(row: (memes.count - 1), section: 0)
                 tableView.insertRows(at: [index], with: UITableViewRowAnimation.automatic)
-                loopChecker += 1
-                print("TABLEVIEW UPDATES loop #\(loopChecker)")
+                print("***TABLE ITEM WITH TOP TEXT: **\(newItem.topText)** IS COMPLETE **")
+                newItems -= 1
             }
         }, completion: nil)
     }

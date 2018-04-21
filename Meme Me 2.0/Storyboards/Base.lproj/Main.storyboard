@@ -145,24 +145,24 @@
                 <collectionViewController id="Fj9-jq-UJy" customClass="CollectionSentMemesViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zbb-aq-8uM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aNa-4e-8zC">
-                            <size key="itemSize" width="200" height="200"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="aNa-4e-8zC">
+                            <size key="itemSize" width="10" height="10"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionSentMemeViewCell" id="hF4-fz-Xsj">
-                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CollectionSentMemeViewCell" id="hF4-fz-Xsj">
+                                <rect key="frame" x="8" y="8" width="10" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-VN-qWG">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-VN-qWG">
+                                            <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -172,7 +172,6 @@
                                     <constraint firstAttribute="trailing" secondItem="BnL-VN-qWG" secondAttribute="trailing" id="uj2-xu-xs9"/>
                                     <constraint firstItem="BnL-VN-qWG" firstAttribute="leading" secondItem="hF4-fz-Xsj" secondAttribute="leading" id="xTV-oD-1nq"/>
                                 </constraints>
-                                <size key="customSize" width="200" height="200"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
