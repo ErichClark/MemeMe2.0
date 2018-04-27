@@ -41,6 +41,8 @@ class CollectionSentMemesViewController: UICollectionViewController {
                 newItems -= 1
             }
         }, completion: nil)
+        setDisplayFormat()
+
     }
     
     // MARK: UICollectionViewDataSource
@@ -79,16 +81,17 @@ class CollectionSentMemesViewController: UICollectionViewController {
     }
     
     func setDisplayFormat () {
-        let minimumInterItemSpacing: CGFloat = 10
-        let minimumLineSpacing: CGFloat = 10
+        let minimumInterItemSpacing: CGFloat = 5
+        let minimumLineSpacing: CGFloat = 5
         let numberOfColumns: CGFloat = 3
 
         let width = ((collectionView?.frame.width)! - minimumInterItemSpacing - minimumLineSpacing) / numberOfColumns
+        print("width = \(width)")
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
-        let sideLength = width - (minimumInterItemSpacing + minimumLineSpacing)
-        layout.itemSize = CGSize(width: sideLength, height: sideLength)
+        layout.minimumInteritemSpacing = minimumInterItemSpacing
+        layout.minimumLineSpacing = minimumLineSpacing
+
+        layout.itemSize = CGSize(width: width, height: width)
         
     }
 }

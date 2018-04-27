@@ -149,7 +149,6 @@ UITextFieldDelegate {
                 (UIActivityType, completed, returnedItems, error) in
                 if completed {
                     self.saveMeme()
-                    self.returnToGalleries()
                 }
             }
             self.present(activityVC, animated: true, completion: nil)

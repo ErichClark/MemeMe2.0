@@ -143,33 +143,34 @@
         <scene sceneID="1Tu-Ny-sUo">
             <objects>
                 <collectionViewController id="Fj9-jq-UJy" customClass="CollectionSentMemesViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zbb-aq-8uM">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" dataMode="prototypes" id="zbb-aq-8uM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="aNa-4e-8zC">
+                        <viewLayoutGuide key="safeArea" id="ZcH-hb-j0o"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="aNa-4e-8zC">
                             <size key="itemSize" width="10" height="10"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CollectionSentMemeViewCell" id="hF4-fz-Xsj">
-                                <rect key="frame" x="8" y="8" width="10" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="CollectionSentMemeViewCell" id="hF4-fz-Xsj">
+                                <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-VN-qWG">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-VN-qWG">
                                             <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="BnL-VN-qWG" firstAttribute="top" secondItem="hF4-fz-Xsj" secondAttribute="top" id="lxJ-mq-Xlf"/>
-                                    <constraint firstAttribute="bottom" secondItem="BnL-VN-qWG" secondAttribute="bottom" id="qdp-QK-fHJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="BnL-VN-qWG" secondAttribute="trailing" id="uj2-xu-xs9"/>
+                                    <constraint firstItem="BnL-VN-qWG" firstAttribute="bottom" secondItem="hF4-fz-Xsj" secondAttribute="bottom" id="qdp-QK-fHJ"/>
+                                    <constraint firstItem="BnL-VN-qWG" firstAttribute="trailing" secondItem="hF4-fz-Xsj" secondAttribute="trailing" id="uj2-xu-xs9"/>
                                     <constraint firstItem="BnL-VN-qWG" firstAttribute="leading" secondItem="hF4-fz-Xsj" secondAttribute="leading" id="xTV-oD-1nq"/>
                                 </constraints>
                             </collectionViewCell>
@@ -186,7 +187,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-0I-lLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="894"/>
+            <point key="canvasLocation" x="1973.5999999999999" y="893.70314842578716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iyl-Hi-tQ9">
@@ -218,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableSentMemeCell" textLabel="Ddg-5w-VSc" detailTextLabel="V0A-hy-mTA" rowHeight="400" style="IBUITableViewCellStyleSubtitle" id="1qx-sG-Q2F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableSentMemeCell" textLabel="Ddg-5w-VSc" detailTextLabel="vem-tA-u5X" rowHeight="400" style="IBUITableViewCellStyleSubtitle" id="1qx-sG-Q2F">
                                 <rect key="frame" x="0.0" y="28" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qx-sG-Q2F" id="BnY-1g-4ZK">
@@ -226,16 +227,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ddg-5w-VSc">
-                                            <rect key="frame" x="16" y="180" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="176" width="31.5" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V0A-hy-mTA">
-                                            <rect key="frame" x="16" y="203.5" width="44" height="14.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vem-tA-u5X">
+                                            <rect key="frame" x="16" y="200" width="55" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -265,7 +266,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-iy-ol6" userLabel="sentMemeDetailImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-iy-ol6" userLabel="sentMemeDetailImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PD2-pI-587">
@@ -290,6 +291,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rjo-lc-Lt0"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="sentMemeDetailImageView" destination="yOG-iy-ol6" id="bhB-8P-IUR"/>
                     </connections>
@@ -305,7 +307,7 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TDE-gH-5wp"/>
+        <segue reference="iAI-rC-Pd3"/>
         <segue reference="8Z8-3o-865"/>
     </inferredMetricsTieBreakers>
 </document>
