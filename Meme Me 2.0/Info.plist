@@ -28,8 +28,6 @@
 	<string>Meme Me wants to save your custom meme to your Photo Library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>MemeMe uses your Photo Library to choose a pic for your new meme.</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchImage</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
