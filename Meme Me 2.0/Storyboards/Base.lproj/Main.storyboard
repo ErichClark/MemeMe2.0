@@ -266,32 +266,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-iy-ol6" userLabel="sentMemeDetailImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-iy-ol6" userLabel="sentMemeDetailImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PD2-pI-587">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem id="csF-OF-2rs">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="wzV-rD-IOk"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r3H-WW-3KP"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PD2-pI-587" firstAttribute="top" secondItem="rjo-lc-Lt0" secondAttribute="top" id="21t-Bu-9oK"/>
                             <constraint firstAttribute="trailing" secondItem="yOG-iy-ol6" secondAttribute="trailing" id="2uf-8E-gtc"/>
                             <constraint firstItem="yOG-iy-ol6" firstAttribute="leading" secondItem="Ih1-ik-uZ1" secondAttribute="leading" id="VCF-n3-lwh"/>
-                            <constraint firstItem="PD2-pI-587" firstAttribute="leading" secondItem="rjo-lc-Lt0" secondAttribute="leading" id="ZL2-CI-mY9"/>
                             <constraint firstAttribute="bottom" secondItem="yOG-iy-ol6" secondAttribute="bottom" id="cFZ-JS-o2l"/>
-                            <constraint firstItem="rjo-lc-Lt0" firstAttribute="trailing" secondItem="PD2-pI-587" secondAttribute="trailing" id="vg9-GE-bjD"/>
                             <constraint firstItem="yOG-iy-ol6" firstAttribute="top" secondItem="Ih1-ik-uZ1" secondAttribute="top" id="zdL-fx-xSi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rjo-lc-Lt0"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sentMemeDetailImageView" destination="yOG-iy-ol6" id="bhB-8P-IUR"/>
                     </connections>
@@ -307,6 +296,7 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="X8X-aZ-gMu"/>
         <segue reference="iAI-rC-Pd3"/>
         <segue reference="8Z8-3o-865"/>
     </inferredMetricsTieBreakers>

@@ -15,6 +15,7 @@ UITextFieldDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // MARK: Outlets
+    
     @IBOutlet weak var sharingToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -24,6 +25,9 @@ UITextFieldDelegate {
     @IBOutlet weak var imageSourceToolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var galleryButton: UIBarButtonItem!
+    
+    // MARK: viewDidLoad
+    // Sets default captioning text attributes, resets text and image
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,8 @@ UITextFieldDelegate {
     }
     
     // MARK: ViewWillAppear
+    // Subscribes to keyboad, hides naviagation bar
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
@@ -42,6 +48,7 @@ UITextFieldDelegate {
     }
     
     // MARK: resetTheWorld - resets the app to an initial state
+    
     func resetTheWorld() {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         shareButton.isEnabled = false
@@ -51,15 +58,17 @@ UITextFieldDelegate {
     }
     
     // MARK: ViewWill Dissapear
+    // unsubscribes from keyboard, unhides navigation bar
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-
     }
     
     // MARK: Actions
-    // Image Pickers and ImagePickerControllers
+    // Image Buttons for Album / Camera
+    
     @IBAction func requestImageFromAlbums(_ sender: Any) {
         importImage(source: .photoLibrary)
     }
@@ -68,15 +77,15 @@ UITextFieldDelegate {
         importImage(source: .camera)
     }
     
-    func saveMeme() {
-        let meme = generateMeme()
-        // UIImageWriteToSavedPhotosAlbum(meme.memedImage!, nil, nil, nil)
-        
+    // MARK: Saves meme to app delegate when sharing is complete
+    
+    func saveMeme(_ meme: Meme) {
         // Add it to the memes array in the Application Delegate
         appDelegate.memes.append(meme)
     }
     
     // MARK: Default meme text formatting
+    
     let memeTextAttributes:[String: Any] = [
         NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
         NSAttributedStringKey.font.rawValue: UIFont(name: "impact", size: 55)!,
@@ -91,6 +100,7 @@ UITextFieldDelegate {
     }
     
     // MARK: Keyboard show / hide / subscribe
+    
     func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
@@ -124,6 +134,8 @@ UITextFieldDelegate {
         return true
     }
     
+    // MARK: Hides/shows toolbars during screen capture.
+    
     func showToolbars(show: Bool) {
         if show {
             sharingToolbar.isHidden = false
@@ -135,12 +147,14 @@ UITextFieldDelegate {
         
     }
     
-    // MARK: Actions
+    // MARK: Sharing Action Button
+    
     @IBAction func requestShare(_ sender: AnyObject) {
         if imagePickerView.image == nil {
             print("Image View is empty.")
         } else {
-            let memedImage = generateMeme().memedImage!
+            let meme = generateMeme()
+            let memedImage = meme.memedImage!
             
             let activityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
@@ -148,19 +162,22 @@ UITextFieldDelegate {
             activityVC.completionWithItemsHandler = {
                 (UIActivityType, completed, returnedItems, error) in
                 if completed {
-                    self.saveMeme()
+                    self.saveMeme(meme)
                 }
             }
             self.present(activityVC, animated: true, completion: nil)
         }
     }
     
+    // MARK: Cancel button
+    
     @IBAction func cancelAndResetTheWorld(_ sender: AnyObject) {
         resetTheWorld()
         returnToGalleries()
     }
     
-    // MARK: generateMeme
+    // MARK: generateMeme - handles screen capture
+    
     func generateMeme() -> Meme {
         
         showToolbars(show: false)
