@@ -9,12 +9,15 @@
 import UIKit
 
 class MemeDetailsViewController: UIViewController {
-
+    
     // MARK: makes a local copy of a passed-in meme
-
     var meme: Meme!
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var sentMemeDetailImageView: UIImageView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        sentMemeDetailImageView.image = meme.memedImage
+    }
 }

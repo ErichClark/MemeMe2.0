@@ -182,7 +182,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="" image="collection" id="seW-tf-jZi"/>
                     <connections>
-                        <segue destination="Nx5-zo-vrV" kind="show" identifier="showMemeDetails" id="TDE-gH-5wp"/>
+                        <segue destination="QI5-6T-aq3" kind="show" identifier="showMemeDetails" id="uyM-fT-dfB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-0I-lLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,7 +251,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" image="table" id="xvB-v7-Nhc"/>
                     <connections>
-                        <segue destination="Nx5-zo-vrV" kind="show" identifier="showMemeDetails" id="iAI-rC-Pd3"/>
+                        <segue destination="QI5-6T-aq3" kind="show" identifier="showMemeDetails" id="0FU-eE-7f2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhL-hK-wuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,35 +259,32 @@
             <point key="canvasLocation" x="2273" y="133"/>
         </scene>
         <!--Meme Details View Controller-->
-        <scene sceneID="yZ7-tx-PJS">
+        <scene sceneID="ChA-AO-pG5">
             <objects>
-                <viewController id="Nx5-zo-vrV" customClass="MemeDetailsViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ih1-ik-uZ1">
+                <viewController storyboardIdentifier="MemeDetailsViewController" id="QI5-6T-aq3" customClass="MemeDetailsViewController" customModule="Meme_Me_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f57-E3-4iu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-iy-ol6" userLabel="sentMemeDetailImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6O-0l-Fdh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yOG-iy-ol6" secondAttribute="trailing" id="2uf-8E-gtc"/>
-                            <constraint firstItem="yOG-iy-ol6" firstAttribute="leading" secondItem="Ih1-ik-uZ1" secondAttribute="leading" id="VCF-n3-lwh"/>
-                            <constraint firstAttribute="bottom" secondItem="yOG-iy-ol6" secondAttribute="bottom" id="cFZ-JS-o2l"/>
-                            <constraint firstItem="yOG-iy-ol6" firstAttribute="top" secondItem="Ih1-ik-uZ1" secondAttribute="top" id="zdL-fx-xSi"/>
+                            <constraint firstItem="e6O-0l-Fdh" firstAttribute="leading" secondItem="ImN-X8-s3z" secondAttribute="leading" id="5VV-qO-HJS"/>
+                            <constraint firstItem="e6O-0l-Fdh" firstAttribute="top" secondItem="ImN-X8-s3z" secondAttribute="top" id="YOk-c1-zOA"/>
+                            <constraint firstItem="ImN-X8-s3z" firstAttribute="bottom" secondItem="e6O-0l-Fdh" secondAttribute="bottom" id="i71-Qb-GyC"/>
+                            <constraint firstItem="ImN-X8-s3z" firstAttribute="trailing" secondItem="e6O-0l-Fdh" secondAttribute="trailing" id="kiE-zh-M7h"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rjo-lc-Lt0"/>
+                        <viewLayoutGuide key="safeArea" id="ImN-X8-s3z"/>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="sentMemeDetailImageView" destination="yOG-iy-ol6" id="bhB-8P-IUR"/>
+                        <outlet property="sentMemeDetailImageView" destination="e6O-0l-Fdh" id="DZI-Fm-Qtp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nY8-To-QHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZM-41-atT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="154"/>
+            <point key="canvasLocation" x="3366" y="226"/>
         </scene>
     </scenes>
     <resources>
@@ -296,8 +293,7 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X8X-aZ-gMu"/>
-        <segue reference="iAI-rC-Pd3"/>
+        <segue reference="uyM-fT-dfB"/>
         <segue reference="8Z8-3o-865"/>
     </inferredMetricsTieBreakers>
 </document>
