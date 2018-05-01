@@ -44,7 +44,7 @@ UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: resetTheWorld - resets the app to an initial state
@@ -63,7 +63,7 @@ UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     // MARK: Actions
@@ -85,14 +85,13 @@ UITextFieldDelegate {
     }
     
     // MARK: Default meme text formatting
-    
-    let memeTextAttributes:[String: Any] = [
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-        NSAttributedStringKey.font.rawValue: UIFont(name: "impact", size: 55)!,
-        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
-        NSAttributedStringKey.strokeWidth.rawValue: -6.0]
-    
     func setDefaultTextAttributes(textfield: UITextField) {
+        let memeTextAttributes:[String: Any] = [
+            NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+            NSAttributedStringKey.font.rawValue: UIFont(name: "impact", size: 55)!,
+            NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+            NSAttributedStringKey.strokeWidth.rawValue: -6.0]
+        
         textfield.delegate = self
         textfield.textColor = UIColor.white
         textfield.defaultTextAttributes = memeTextAttributes
@@ -137,14 +136,8 @@ UITextFieldDelegate {
     // MARK: Hides/shows toolbars during screen capture.
     
     func showToolbars(show: Bool) {
-        if show {
-            sharingToolbar.isHidden = false
-            imageSourceToolbar.isHidden = false
-        } else {
-            sharingToolbar.isHidden = true
-            imageSourceToolbar.isHidden = true
-        }
-        
+            sharingToolbar.isHidden = !show
+            imageSourceToolbar.isHidden = !show
     }
     
     // MARK: Sharing Action Button

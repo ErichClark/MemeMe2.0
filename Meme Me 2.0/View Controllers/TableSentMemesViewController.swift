@@ -27,6 +27,7 @@ class TableSentMemesViewController: UITableViewController {
     // triggers refresh of local meme array
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         updateTable()
         setDisplayFormat()
     }
